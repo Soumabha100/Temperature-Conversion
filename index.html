@@ -11,7 +11,7 @@
 <body>
     <form >
         <h1>Temperature Conversion</h1>
-        <input type="number" id="myInput" value="0"><br>
+        <input type="number" inputmode="numeric" step="0.1" maxlength="6" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" id="myInput" value="0"><br>
 
         <input type="radio" id="toFahrenheit" name="unit">
         <label for="toFahrenheit">Celsius ➡️ Fahrenheit</label><br>
